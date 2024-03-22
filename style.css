@@ -193,11 +193,9 @@ nav {
 }
 
 
-
 /* ====================================
 ====================================
 ==================================== */
-
 
 
 @media screen and (max-width: 619px) {
@@ -270,4 +268,28 @@ nav {
     width: 80%;
   }
 
+}
+
+
+/* ====================================
+====================================
+==================================== */
+
+
+@media screen and (min-width:320px) and (max-width:350px){
+  .section-wrapper-container{
+    flex-direction: column-reverse;
+    /* align-items: baseline; */
+    gap: 16px;
+  }
+
+  .hero-container .main-content h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .hero-container .main-content p {
+    font-size: 12px;
+    line-height: 20px;
+  }
 }
