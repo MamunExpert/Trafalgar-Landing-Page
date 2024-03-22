@@ -28,11 +28,6 @@ nav {
   position: relative;
 }
 
-.logo img {
-  width: 80%;
-  height: auto;
-}
-
 .menu-list {
   gap: 22px;
 }
@@ -97,24 +92,26 @@ nav {
 
 /* ====================================
 ============ breakpoints ============ */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   .container {
     padding: 0;
   }
 
   nav {
-    height: 10vh;
     padding: 0 16px;
   }
 
-
-  #clicker:checked~#clicker-btn .open {
-    display: none;
+  .menu-list{
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    right: 0;
+    background: #e9f2ff;
   }
 
-  #clicker:checked~#clicker-btn .close {
-    display: block;
-  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 350px) {}
