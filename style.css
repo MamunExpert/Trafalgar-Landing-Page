@@ -148,6 +148,7 @@ nav {
     right: -50%;
     transform: translateX(200%) rotateZ(-90deg);
     background: #e9f2ff;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
     z-index: 100;
     transition: all .4s ease-in-out;
   }
