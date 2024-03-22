@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
 }
 
 .container {
@@ -9,42 +12,89 @@
   padding: 0 120px;
 }
 
-nav {
-  padding: 16px 0;
-}
 .d-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.menu-list {
-  gap: 15px;
+nav {
+  padding: 32px 0;
 }
 
-.menu-list a {
+.navbar{
+  width:100%;
+  list-style-type:none;
+  position: relative;
+}
+
+
+.logo img {
+  width:80%;
+  height: auto;
+}
+
+.menu-list {
+  gap: 22px;
+}
+
+.navbar .menu-list a {
   text-decoration: none;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   color: #8f8a99;
+  position: relative;
+  transition: all 0.2s ease-in-out;
 }
 
-#clicker,
-.open .close {
-  display: none;
+.menu-list a:hover {
+  color: #1f1534;
 }
 
-nav .site-img {
-  width: 200px;
+.menu-list a::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: #458ff6;
+  transition: all 0.2s ease-in-out;
 }
 
-nav .site-img img {
-  max-width: 50%;
-  height: auto;
+.menu-list a:hover:after {
+  width: 100%;
 }
 
-.open {
-  display: block;
+.menu-list a.active {
+  color: #1f1534;
+  font-weight: 700;
+}
+
+
+
+/* ====================================
+============ breakpoints ============ */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0;
+  }
+  nav {
+    height:10vh;
+    padding: 0 16px;
+  }
+
+
+  #clicker:checked ~ #clicker-btn .open {
+    display: none;
+  }
+
+  #clicker:checked ~ #clicker-btn .close {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 350px) {
 }
