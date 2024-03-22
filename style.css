@@ -9,10 +9,15 @@
 
 .container {
   max-width: 1600px;
+  margin: 120px 84px;
+}
+
+.header-container {
+  max-width: 1600px;
   margin: 0 79px;
 }
 
-#home{
+#home {
   height: 100vh;
 }
 
@@ -105,7 +110,14 @@ nav {
 
 
 
-
+/* ====================================
+=======================================
+============ hero area ============ */
+.header-background-wrapper {
+  background-image: url(./assets/element.png);
+  background-repeat: no-repeat;
+  background-position: -30px 110px;
+}
 
 .section-wrapper-container {
   display: flex;
@@ -114,7 +126,7 @@ nav {
   margin-top: 18px;
 }
 
-.hero-container .main-content{
+.hero-container .main-content {
   max-width: 442px;
   flex-shrink: 0;
 }
@@ -153,16 +165,37 @@ nav {
   margin-top: 24px;
 }
 
-.btn:hover{
+.btn:hover {
+  background: #1979ff;
+}
+
+.transparent {
+  width: 198px;
+  height: 54px;
+  color: #006aff;
+  background: #fff;
+  border: 1px solid #006aff;
+}
+
+.transparent:hover {
+  color: #fff;
+  background: #458FF6;
+  border: 1px solid #006aff;
+}
+
+.btn:active {
+  transform: scale(.95);
   background: #006aff;
 }
 
-.hero-container .image-content{
+
+
+.hero-container .image-content {
   max-width: 528px;
   flex-shrink: 0;
 }
 
-.hero-container .image-content img{
+.hero-container .image-content img {
   width: 100%;
   height: auto;
   margin: 0 auto;
@@ -171,11 +204,68 @@ nav {
 
 
 
+/* ====================================
+=======================================
+========== service section ========== */
+
+
+
+
 
 /* ====================================
+=======================================
+========== leading section ========== */
+.section-wrapper-container .main-content {
+  max-width: 440px;
+  flex-shrink: 0;
+}
+
+.leading-section .main-content {
+  order: 2;
+}
+
+.leading-section .image-content {
+  order: 1;
+}
+
+.section-wrapper-container .main-content h2 {
+  width: 90%;
+  color: #000;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 46px;
+}
+
+.section-wrapper-container .main-content p {
+  width: 90%;
+  color: #7D7987;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 26px;
+  margin-top: 18px;
+}
+
+.section-wrapper-container .image-content {
+  max-width: 500px;
+  flex-shrink: 0;
+}
+
+.section-wrapper-container .image-content img {
+  width: 100%;
+}
+
+
+
+
+
+/* ====================================
+=======================================
 ============ breakpoints ============ */
+
 @media screen and (max-width: 899px) {
-  .container {
+  .header-container {
     margin: 0 16px;
   }
 
@@ -199,7 +289,11 @@ nav {
 
 
 @media screen and (max-width: 619px) {
-  .container {
+  .header-background-wrapper {
+    background-image: none;
+  }
+
+  .header-container {
     margin: 0;
   }
 
@@ -239,10 +333,20 @@ nav {
 
 
 
-/* ====================================
+  /* ====================================
 ==================================== */
 
-  .section-wrapper-container{
+  .container {
+    margin: 84px 16px;
+  }
+
+  .section-wrapper-container {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+/* ============ hero area ============ */
+  .hero-container {
     flex-direction: column-reverse;
     /* align-items: baseline; */
     gap: 32px;
@@ -259,15 +363,17 @@ nav {
     line-height: 24px;
   }
 
-  .hero-container .image-content{
+  .hero-container .image-content {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .hero-container .image-content img{
+
+  .hero-container .image-content img {
     width: 80%;
   }
 
+  
 }
 
 
@@ -276,8 +382,8 @@ nav {
 ==================================== */
 
 
-@media screen and (min-width:320px) and (max-width:350px){
-  .section-wrapper-container{
+@media screen and (min-width:320px) and (max-width:350px) {
+  .section-wrapper-container {
     flex-direction: column-reverse;
     /* align-items: baseline; */
     gap: 16px;
