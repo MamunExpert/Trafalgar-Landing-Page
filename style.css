@@ -12,6 +12,10 @@
   margin: 0 79px;
 }
 
+#home{
+  height: 100vh;
+}
+
 .d-flex {
   display: flex;
   justify-content: space-between;
@@ -19,7 +23,7 @@
 }
 
 nav {
-  padding: 32px 0;
+  padding: 26px 0px;
 }
 
 .navbar {
@@ -28,9 +32,9 @@ nav {
   position: relative;
 }
 
-.navbar .logo img{
+.navbar .logo img {
   display: block;
-  max-width: 120px;
+  max-width: 140px;
   height: auto;
   cursor: pointer;
 }
@@ -86,13 +90,13 @@ nav {
   display: none;
 }
 
-.open{
+.open {
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.close{
+.close {
   right: 20px;
   top: 20px;
 }
@@ -100,9 +104,77 @@ nav {
 
 
 
+
+
+
+.section-wrapper-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.hero-container .main-content{
+  max-width: 442px;
+  flex-shrink: 0;
+}
+
+.hero-container .main-content h1 {
+  color: #000;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 56px;
+}
+
+.hero-container .main-content p {
+  color: #7D7987;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px;
+  margin-top: 18px;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  width: 200px;
+  height: 56px;
+  flex-shrink: 0;
+  font-size: 18px;
+  border-radius: 55px;
+  color: #FFF;
+  background: #458FF6;
+  font-style: normal;
+  font-weight: 700;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+  margin-top: 24px;
+}
+
+.btn:hover{
+  background: #006aff;
+}
+
+.hero-container .image-content{
+  max-width: 528px;
+  flex-shrink: 0;
+}
+
+.hero-container .image-content img{
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+
+
+
+
 /* ====================================
 ============ breakpoints ============ */
-@media screen and (max-width: 899px){
+@media screen and (max-width: 899px) {
   .container {
     margin: 0 16px;
   }
@@ -111,14 +183,22 @@ nav {
     padding: 16px;
   }
 
-  .navbar .logo img{
+  .navbar .logo img {
     max-width: 90px;
   }
 
-  .navbar .menu-list a{
+  .navbar .menu-list a {
     font-size: 14px;
   }
 }
+
+
+
+/* ====================================
+====================================
+==================================== */
+
+
 
 @media screen and (max-width: 619px) {
   .container {
@@ -129,22 +209,23 @@ nav {
     padding: 16px;
   }
 
-  .close, .open{
+  .close,
+  .open {
     display: block;
   }
 
-  .navbar .menu-list a{
+  .navbar .menu-list a {
     font-size: 18px;
   }
 
-  .menu-list{
+  .menu-list {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 64%;
     height: 100vh;
     position: fixed;
-    top:0;
+    top: 0;
     right: -50%;
     transform: translateX(200%) rotateZ(-90deg);
     background: #e9f2ff;
@@ -153,9 +234,40 @@ nav {
     transition: all .4s ease-in-out;
   }
 
-  #clicker:checked ~ .menu-list{
+  #clicker:checked~.menu-list {
     right: 0;
     transform: translateX(0) rotateZ(0);
+  }
+
+
+
+/* ====================================
+==================================== */
+
+  .section-wrapper-container{
+    flex-direction: column-reverse;
+    /* align-items: baseline; */
+    gap: 32px;
+    padding: 0 16px;
+  }
+
+  .hero-container .main-content h1 {
+    font-size: 38px;
+    line-height: 45px;
+  }
+
+  .hero-container .main-content p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .hero-container .image-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-container .image-content img{
+    width: 80%;
   }
 
 }
