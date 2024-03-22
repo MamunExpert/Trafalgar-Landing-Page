@@ -5,11 +5,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Mulish", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .container {
   max-width: 1600px;
-  margin: 120px 84px;
+  margin: 160px 84px;
 }
 
 .header-container {
