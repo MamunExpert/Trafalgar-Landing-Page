@@ -145,14 +145,15 @@ nav {
     height: 100vh;
     position: fixed;
     top:0;
-    right: 0;
+    right: -50%;
     transform: translateX(200%) rotateZ(-90deg);
     background: #e9f2ff;
     z-index: 100;
-    transition: all .3s ease-in-out;
+    transition: all .4s ease-in-out;
   }
 
   #clicker:checked ~ .menu-list{
+    right: 0;
     transform: translateX(0) rotateZ(0);
   }
 
